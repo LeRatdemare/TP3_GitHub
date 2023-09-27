@@ -2,6 +2,7 @@
 
 public class Tableau
 {
+    static private Random rnd = new Random();
     public int X { get; set; }
     public int Y { get; set; }
     public Dictionary<string, bool> mots;
@@ -32,7 +33,14 @@ public class Tableau
 
     public void InitDictionaire()
     {
+        // On veut au total 1/4 des lettres du tableau qui soient contenus dans des mots à trouver
+        int nbLettresATrouver = (X * Y) / 4;
+        int nbLettresPlacees = 0;
 
+        while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
+        {
+
+        }
     }
 
     public bool EstDansTab(string mot)
