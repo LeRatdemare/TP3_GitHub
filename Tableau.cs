@@ -25,11 +25,10 @@ public class Tableau
         int compteur = 0;
         foreach (KeyValuePair<string, bool> mot in mots)
         {
-            if (mot.Value)
+            if (!mot.Value)
                 compteur++;
         }
-
-        return 4;
+        return compteur;
     }
 
     // PROBLEME : Pour le moment, il peut y avoir plusieurs fois le même mot dans le dictionnaire
