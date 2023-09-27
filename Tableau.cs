@@ -47,21 +47,31 @@ public class Tableau
 
     public bool EstDansTab(string mot)
     {
-        return false;
+        bool trouve = false;
+        foreach (KeyValuePair<string, bool> motDuTableau in mots)
+        {
+            if (motDuTableau.Key == mot)
+                trouve = true;
+        }
+        return trouve;
     }
 
     public bool EstTrouve(string mot)
     {
-        return false;
+        if (mots[mot])
+            return true;
+        else
+            return false;
     }
 
     public void AffichageDeTableau()
     {
-        for (int i = 0; i < X; i++)
+        for (int i = 0; i < 5; i++)
         {
-            for (int j = 0; j < Y; j++)
+            for (int j = 0; j < 5; j++)
             {
-                Console.WriteLine("_");
+                tab[i, j] = '_';
+                Console.Write(tab[i, j] + "");
             }
         }
     }

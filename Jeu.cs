@@ -16,7 +16,7 @@ public class Jeu
         bool quitter = false;
         while (!Gagner() && !quitter)
         {
-            //plateau.Affichage();
+            plateau.AffichageDeTableau();
             Console.WriteLine("Pour quitter veuillez saisir q.\nVeuillez saisir un mot du tableau : ");
             string mot = Console.ReadLine()!;
             quitter = Quitter(mot);
