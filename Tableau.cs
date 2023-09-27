@@ -22,7 +22,13 @@ public class Tableau
     //Méthodes
     public int NombreDeMots()
     {
-        return 4;
+        int compteur = 0;
+        foreach (KeyValuePair<string, bool> mot in mots)
+        {
+            if (mot.Value)
+                compteur++;
+        }
+        return compteur;
     }
 
     public void InitDictionaire()
@@ -39,10 +45,7 @@ public class Tableau
 
     public bool EstDansTab(string mot)
     {
-        if (mots[mot] == true)
-            return true;
-        else
-            return false;
+        return false;
     }
 
     public bool EstTrouve(string mot)
@@ -50,9 +53,15 @@ public class Tableau
         return false;
     }
 
-    public override string ToString()
+    public void AffichageDeTableau()
     {
-        return base.ToString();
+        for (int i = 0; i < X; i++)
+        {
+            for (int j = 0; j < Y; j++)
+            {
+                Console.WriteLine("_");
+            }
+        }
     }
 
     public void EnleverMot(string mot)
