@@ -39,9 +39,15 @@ public class Tableau
         return false;
     }
 
-    public override string ToString()
+    public void AffichageDeTableau()
     {
-        return base.ToString();
+        for (int i = 0; i < X; i++)
+        {
+            for (int j = 0; j < Y; j++)
+            {
+                Console.WriteLine("_");
+            }
+        }
     }
 
     public void EnleverMot(string mot)
