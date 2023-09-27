@@ -71,6 +71,9 @@ public class Tableau
             for (int j = 0; j < Y; j++)
             {
                 tab[i, j] = '_';
+                if (j == 0)
+                    Console.Write('#');
+
                 Console.Write(tab[i, j] + " ");
             }
             Console.WriteLine();
