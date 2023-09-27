@@ -67,8 +67,9 @@ public class Tableau
             for (int j = 0; j < 5; j++)
             {
                 tab[i, j] = '_';
-                Console.Write(tab[i, j] + "");
+                Console.Write(tab[i, j] + " ");
             }
+            Console.WriteLine();
         }
     }
 
