@@ -28,7 +28,8 @@ public class Tableau
             if (mot.Value)
                 compteur++;
         }
-        return compteur;
+
+        return 4;
     }
 
     // PROBLEME : Pour le moment, il peut y avoir plusieurs fois le même mot dans le dictionnaire
@@ -40,7 +41,7 @@ public class Tableau
 
         while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
         {
-            int tailleMot = rnd.Next(Mot.TAILLE_MAX) + 1;
+            int tailleMot = rnd.Next(Mot.TAILLE_MIN, Mot.TAILLE_MAX + 1);
             mots.Add(Mot.getMot(tailleMot), false);
             nbLettresPlacees += tailleMot;
         }

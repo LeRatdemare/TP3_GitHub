@@ -6,7 +6,7 @@ public class Jeu
     private int tour;
     public Jeu()
     {
-        plateau = new Tableau(5, 5);
+        plateau = new Tableau(10, 5);
         tour = 0;
     }
 
