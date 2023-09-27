@@ -4,6 +4,7 @@ public class Tableau
 {
     public int X { get; set; }
     public int Y { get; set; }
+    public Dictionary<string, bool> mots;
     public char[,] tab;
 
     //Constructeur
@@ -12,6 +13,9 @@ public class Tableau
         this.X = x;
         this.Y = y;
         tab = new char[x, y];
+        mots = new Dictionary<string, bool>();
+        InitDictionaire();
+
     }
 
     //Méthodes
@@ -19,4 +23,19 @@ public class Tableau
     {
         return 4;
     }
+
+    public void InitDictionaire()
+    {
+
+    }
+
+    public bool EstDansTab(string mot)
+    {
+        return false;
+    }
+    public bool EstTrouve(string mot)
+    {
+        return false;
+    }
+
 }
