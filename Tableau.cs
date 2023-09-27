@@ -1,5 +1,7 @@
 // Affichage tableau 
 
+using System.Runtime.CompilerServices;
+
 public class Tableau
 {
     static private Random rnd = new Random();
@@ -25,6 +27,7 @@ public class Tableau
         int compteur = 0;
         foreach (KeyValuePair<string, bool> mot in mots)
         {
+            Console.WriteLine(mot.Key);
             if (!mot.Value)
                 compteur++;
         }
@@ -34,7 +37,7 @@ public class Tableau
     public void InitDictionaire()
     {
         // On veut au total 1/4 des lettres du tableau qui soient contenus dans des mots à trouver
-        int nbLettresATrouver = (X * Y) / 4;
+        int nbLettresATrouver = (X * Y) / 2;
         int nbLettresPlacees = 0;
 
         while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
@@ -43,6 +46,11 @@ public class Tableau
             mots.Add(Mot.getMot(tailleMot), false);
             nbLettresPlacees += tailleMot;
         }
+    }
+
+    public void PlacerMotsDansTableau()
+    {
+        // Placer les mots dans le tableau à partir du dictionnaire
     }
 
     public bool EstDansTab(string mot)
