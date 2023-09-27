@@ -21,7 +21,13 @@ public class Tableau
     //Méthodes
     public int NombreDeMots()
     {
-        return 4;
+        int compteur = 0;
+        foreach (KeyValuePair<string, bool> mot in mots)
+        {
+            if (mot.Value)
+                compteur++;
+        }
+        return compteur;
     }
 
     public void InitDictionaire()
