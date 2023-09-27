@@ -28,11 +28,9 @@ public class Tableau
             if (mot.Value)
                 compteur++;
         }
-
-        return 4;
+        return compteur;
     }
 
-    // PROBLEME : Pour le moment, il peut y avoir plusieurs fois le même mot dans le dictionnaire
     public void InitDictionaire()
     {
         // On veut au total 1/4 des lettres du tableau qui soient contenus dans des mots à trouver
@@ -41,15 +39,10 @@ public class Tableau
 
         while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
         {
-            int tailleMot = rnd.Next(Mot.TAILLE_MIN, Mot.TAILLE_MAX + 1);
+            int tailleMot = rnd.Next(Mot.TAILLE_MAX) + 1;
             mots.Add(Mot.getMot(tailleMot), false);
             nbLettresPlacees += tailleMot;
         }
-    }
-
-    public void PlacerMotsDansTableau()
-    {
-        // Placer les mots dans le tableau à partir du dictionnaire
     }
 
     public bool EstDansTab(string mot)
