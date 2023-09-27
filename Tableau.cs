@@ -2,6 +2,7 @@
 
 public class Tableau
 {
+    static private Random rnd = new Random();
     public int X { get; set; }
     public int Y { get; set; }
     public Dictionary<string, bool> mots;
@@ -21,21 +22,41 @@ public class Tableau
     //Méthodes
     public int NombreDeMots()
     {
-        return 4;
+        int compteur = 0;
+        foreach (KeyValuePair<string, bool> mot in mots)
+        {
+            if (mot.Value)
+                compteur++;
+        }
+        return compteur;
     }
 
     public void InitDictionaire()
     {
+        // On veut au total 1/4 des lettres du tableau qui soient contenus dans des mots à trouver
+        int nbLettresATrouver = (X * Y) / 4;
+        int nbLettresPlacees = 0;
 
+        while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
+        {
+
+        }
     }
 
     public bool EstDansTab(string mot)
     {
-        return false;
+        bool trouve = false;
+        foreach (KeyValuePair<string, bool> motDuTableau in mots)
+        {
+            if (motDuTableau.Key == mot)
+                trouve = true;
+        }
+        return trouve;
     }
 
     public bool EstTrouve(string mot)
     {
+
         return false;
     }
 

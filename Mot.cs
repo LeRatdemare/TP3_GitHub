@@ -1,5 +1,6 @@
 public class Mot
 {
+    public const int TAILLE_MAX = 7;
     static private Random rnd = new Random();
 
     public static String[] MOTS = {
