@@ -26,7 +26,7 @@ public class Mot
 
     }
 
-    public String getMot(int taille)
+    public static String getMot(int taille)
     {
         int pos = rnd.Next(MOTS.Length);
         int nbMotsTestes = 0;

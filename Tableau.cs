@@ -39,7 +39,9 @@ public class Tableau
 
         while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
         {
-
+            int tailleMot = rnd.Next(Mot.TAILLE_MAX) + 1;
+            mots.Add(Mot.getMot(tailleMot), false);
+            nbLettresPlacees += tailleMot;
         }
     }
 
@@ -56,8 +58,10 @@ public class Tableau
 
     public bool EstTrouve(string mot)
     {
-
-        return false;
+        if (mots[mot])
+            return true;
+        else
+            return false;
     }
 
     public void AffichageDeTableau()
