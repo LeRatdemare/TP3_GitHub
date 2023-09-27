@@ -37,11 +37,18 @@ public class Tableau
 
     public bool EstDansTab(string mot)
     {
-        return false;
+        bool trouve = false;
+        foreach (KeyValuePair<string, bool> motDuTableau in mots)
+        {
+            if (motDuTableau.Key == mot)
+                trouve = true;
+        }
+        return trouve;
     }
 
     public bool EstTrouve(string mot)
     {
+
         return false;
     }
 
