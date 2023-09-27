@@ -31,10 +31,7 @@ public class Tableau
 
     public bool EstDansTab(string mot)
     {
-        if (mots[mot] == true)
-            return true;
-        else
-            return false;
+        return false;
     }
 
     public bool EstTrouve(string mot)
