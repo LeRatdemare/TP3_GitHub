@@ -44,9 +44,13 @@ public class Tableau
         return base.ToString();
     }
 
-    public void MotEnlever()
+    public void EnleverMot(string mot)
     {
-
+        // Si le mot est dans la liste :
+        // - On le retire de tab
+        // - On le passe à true dans mots
+        // Sinon :
+        // On lève une erreur
     }
 
 }
