@@ -31,8 +31,12 @@ public class Tableau
 
     public bool EstDansTab(string mot)
     {
-        return false;
+        if (mots[mot] == true)
+            return true;
+        else
+            return false;
     }
+
     public bool EstTrouve(string mot)
     {
         return false;
@@ -41,6 +45,11 @@ public class Tableau
     public override string ToString()
     {
         return base.ToString();
+    }
+
+    public void MotEnlever()
+    {
+
     }
 
 }
