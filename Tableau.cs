@@ -84,13 +84,26 @@ public class Tableau
         }
     }
 
+    // WARNING : Ne recherche que les mots de gauche à droite et de haut en bas
     public void EnleverMot(string mot)
     {
         // Si le mot est dans la liste :
-        // - On le retire de tab
-        // - On le passe à true dans mots
-        // Sinon :
-        // On lève une erreur
+        if (mots.ContainsKey(mot))
+        {
+            // - On le retire de tab
+            int foundLetters = 0;
+
+            int x = 0;
+            int y = 0;
+            while ((x < X || y < Y) && foundLetters < mot.Length)
+            {
+
+            }
+            // - On le passe à true dans mots
+            mots[mot] = true;
+        }
+        else
+            throw new Exception($"Le mot {mot} n'est pas dans le tableau.");
     }
 
 }
