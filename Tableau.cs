@@ -56,8 +56,10 @@ public class Tableau
 
     public bool EstTrouve(string mot)
     {
-
-        return false;
+        if (mots[mot])
+            return true;
+        else
+            return false;
     }
 
     public void AffichageDeTableau()
