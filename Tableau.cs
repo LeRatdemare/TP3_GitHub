@@ -1,10 +1,17 @@
 // Affichage tableau 
 
 public class Tableau{
-    public int x {get; set;}
-    public int y {get; set;}
+    public int X {get; set;} 
+    public int Y {get; set;}
     public char[,] tab = new char[x,y];
-    public Tableau (){
 
+    //Constructeur
+    public Tableau (){
+       
+    }
+
+//Méthodes
+    public int NombreDeMots(){
+        return 4;
     }
 }
