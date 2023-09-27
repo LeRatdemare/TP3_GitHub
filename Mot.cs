@@ -1,7 +1,7 @@
 public class Mot
 {
     public const int TAILLE_MAX = 7;
-    public const int TAILLE_MIN = 3;
+    public const int TAILLE_MIN = 4;
     static private Random rnd = new Random();
 
     public static String[] MOTS = {

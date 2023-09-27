@@ -1,5 +1,7 @@
 // Affichage tableau 
 
+using System.Runtime.CompilerServices;
+
 public class Tableau
 {
     static private Random rnd = new Random();
@@ -25,23 +27,22 @@ public class Tableau
         int compteur = 0;
         foreach (KeyValuePair<string, bool> mot in mots)
         {
-            if (mot.Value)
+            Console.WriteLine(mot.Key);
+            if (!mot.Value)
                 compteur++;
         }
-
-        return 4;
+        return compteur;
     }
 
-    // PROBLEME : Pour le moment, il peut y avoir plusieurs fois le même mot dans le dictionnaire
     public void InitDictionaire()
     {
         // On veut au total 1/4 des lettres du tableau qui soient contenus dans des mots à trouver
-        int nbLettresATrouver = (X * Y) / 4;
+        int nbLettresATrouver = (X * Y) / 2;
         int nbLettresPlacees = 0;
 
         while (nbLettresPlacees <= nbLettresATrouver - Mot.TAILLE_MAX)
         {
-            int tailleMot = rnd.Next(Mot.TAILLE_MIN, Mot.TAILLE_MAX + 1);
+            int tailleMot = rnd.Next(Mot.TAILLE_MAX) + 1;
             mots.Add(Mot.getMot(tailleMot), false);
             nbLettresPlacees += tailleMot;
         }
@@ -78,6 +79,9 @@ public class Tableau
             for (int j = 0; j < Y; j++)
             {
                 tab[i, j] = '_';
+                if (j == 0)
+                    Console.Write('#');
+
                 Console.Write(tab[i, j] + " ");
             }
             Console.WriteLine();
