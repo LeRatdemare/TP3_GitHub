@@ -25,7 +25,7 @@ public class Tableau
         int compteur = 0;
         foreach (KeyValuePair<string, bool> mot in mots)
         {
-            if (mot.Value)
+            if (!mot.Value)
                 compteur++;
         }
         return compteur;
@@ -66,9 +66,9 @@ public class Tableau
 
     public void AffichageDeTableau()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < X; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < Y; j++)
             {
                 tab[i, j] = '_';
                 Console.Write(tab[i, j] + " ");
